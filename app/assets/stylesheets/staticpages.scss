@@ -1,0 +1,155 @@
+// Place all the styles related to the staticpages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color: whitesmoke;
+}
+.mdl-layout__drawer {
+    .mdl-layout-title {
+        line-height: 2rem;
+    }
+}
+.layout-transparent {
+	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('/assets/coderdojo-konan-header-image-1-min.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.mdl-layout__header, .mdl-layout__drawer-button {
+  color: snow;
+  .mdl-layout__header-row {
+      margin-top: 0.5rem;
+    .mdl-layout-title {
+        
+    }
+  }
+  .header-section {
+        color: snow;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
+      .header-section-text {
+        p {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          text-align: center; 
+        }
+      }
+      .header-section-button {
+          width: 100%;
+          height: 100%;
+          a {
+            height: 100%;
+            font-size: 1.3rem;
+            border-radius: 3px;
+            padding-left: 0.8rem;
+            padding-bottom: 0.8rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+      }
+  }
+}
+main {
+article {
+    margin: 0.5rem;
+    #about-section {
+      padding: 0.8rem;
+      .about-section-card {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+      }
+    }
+    #language-section {
+      padding: 0.8rem;
+      .language-section-card {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        .mdl-card__supporting-text {
+            padding: 0.5rem;
+            margin: auto;
+        }
+        .language-section-card-cell {
+            p,img {
+                margin: auto;
+            }
+        }
+      }
+    }
+    #summary-section {
+      padding: 0.8rem;
+      .summary-section-card {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+      }
+    }
+    #partner-section {
+      padding: 0.8rem;
+      .partner-section-card {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        .mdl-card__supporting-text {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+            margin: auto;
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+        .language-section-card-cell {
+            p,img {
+                margin: auto;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        .partner-list {
+            padding: 0.8rem;
+            margin: 1rem;
+        }
+        .partner-list-item {
+            padding: 0.8rem;
+            margin: 1rem;
+            width: 20rem;
+            height: 5rem;    
+            list-style-type: none;
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+            p {
+                text-align: center;
+            }
+        }
+      }
+    }
+    #contact-section {
+      padding: 0.8rem;
+      .contact-section-card {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background: #dcdcdc;
+  border: none;
+}
+::-webkit-scrollbar-thumb{
+  background: #aaa;
+  border-radius: 1rem;
+  box-shadow: none;
+}
