@@ -1,0 +1,51 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.pages-layout {
+    .pages-layout__header {
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('/assets/coderdojo-konan-header-image-1-min.jpg');
+        background-size: cover;
+    	background-position: center;
+        .mdl-layout__header-row {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    article {
+        margin: 0.5rem;
+        #pages-section {
+          padding: 0.8rem;
+          .pages-section-card {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+          }
+        }
+    }
+    .mdl-layout__content {
+        #pages-section {
+            .docs-list {
+                ul {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        #pages_contents {
+            h1 {
+                font-size: 2.3rem
+            }
+            h2 {
+                font-size: 2.0rem;
+            }
+            h3 {
+                font-size: 1.8rem;
+            }
+            h4 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
