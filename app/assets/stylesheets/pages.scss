@@ -21,6 +21,14 @@
             padding: 0.5rem;
           }
         }
+        .pages-section {
+          padding: 0.8rem;
+          .pages-section-card {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+          }
+        }
     }
     .mdl-layout__content {
         #pages-section {
@@ -32,16 +40,20 @@
         }
         #pages_contents {
             h1 {
-                font-size: 2.3rem
+                font-size: 2.3rem;
+                color: black;
             }
             h2 {
                 font-size: 2.0rem;
+                color: black;
             }
             h3 {
                 font-size: 1.8rem;
+                color: black;
             }
             h4 {
                 font-size: 1.5rem;
+                color: black;
             }
             p {
                 font-size: 1rem;

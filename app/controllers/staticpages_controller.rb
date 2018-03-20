@@ -10,7 +10,11 @@ class StaticpagesController < ApplicationController
     if today < next_event_date then
       @next_event_url = next_event_url
     else
-      @next_event_url = 'https://www.coderdojo-konan.jp/next-event-is-still-planned/'
+      @next_event_url = nil
     end
+  end
+  def next_event_is_still_planned
+  end
+  def ninjas_works
   end
 end

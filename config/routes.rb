@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
+  
   root 'staticpages#index'
-  resources :pages, only: [:index, :show]
+  
+  get '/pages' => 'pages#index'
+  
+  resources :pages, only: [:show], :path => '/'
+  
+  get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
+  get '/ninjas_works' => 'staticpages#ninjas_works'
+  
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

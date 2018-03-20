@@ -1,184 +1,172 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>CoderDojo Konan Okayama | 子供のためのプログラミング道場</title>
-    <!-- Page styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--scroll layout-transparent">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title"><img src="/assets/coderdojo-konan-header-logo.png" alt="CoderDojo Konan Okayama"></span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
-        </div>
-        <div class="header-section">
-          <div class="header-section-text">
-            <h2>子供のためのプログラミング道場</h2>
-            <h1>CoderDojo Konan Okayama</h1><br>
-            <p>CoderDojo 岡山 岡南 は、小中高生を対象とした<strong>無料プログラミング道場</strong>です。 <br>
-              参加者（ニンジャ）の作りたいものを先生（メンター）がニンジャ目線で一緒に考え、<br>
-              アドバイスをし、 そしてモノづくりの楽しさを共有します！</p>
-          </div>
-          <div class="header-section-button">
-            <%= link_to "次回の開催Check!", @next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect' %>
-          </div>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">CoderDojo Konan Okayama Official Site</span>
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll layout-transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><img src="/assets/coderdojo-konan-header-logo.png" alt="CoderDojo Konan Okayama"></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="<%= @first_link[:url] %>"><%= @first_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @second_link[:url] %>"><%= @second_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @third_link[:url] %>"><%= @third_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @fourth_link[:url] %>"><%= @fourth_link[:text] %></a>
         </nav>
       </div>
-      <main class="mdl-layout__content">
-        <article>
-          <section id="about-section">
-            <div class="about-section-card mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">CoderDojo って？</h1>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <p>CoderDojo は7〜17歳の子どもを対象にした無料で参加できるプログラミング道場(サークル)です。<br>
-                2011年にアイルランドで始まり、世界では70カ国・1,200の道場、日本では全国に84以上の道場があります。(2017/5/27現在)</p>
-                <p>各地のCoderDojoは、それぞれの有志がボランティアで運営していて、<br>
-                CoderDojoでは、Ninja同士（参加している子供をNinjaといいます。）で教えあったり、<br>
-                わからないことがあれば、現役プログラマーを中心としたメンターさんに質問したりできます。</p>
-                <p>CoderDojo で学べる内容は道場ごとに異なります。例えば、次の内容を学べる道場があります。</p>
-                <ul>
-                  <li>Scratch, Hour of Code</li>
-                  <li>HTML, CSS, JavaScript</li>
-                  <li>PHP, Python, Ruby, Unity</li>
-                  <li>Arduino, Raspberry Pi など</li>
-                </ul>
-                <p>道場ごとに内容も規模も違いますが、Ninjaの自主性を重視している姿勢は一緒です。</p>
-              </div>
+      <div class="header-section">
+        <div class="header-section-text">
+          <h2>子供のためのプログラミング道場</h2>
+          <h1>CoderDojo Konan Okayama</h1><br>
+          <p>CoderDojo 岡山 岡南 は、小中高生を対象とした<strong>無料プログラミング道場</strong>です。 <br>
+            参加者（ニンジャ）の作りたいものを先生（メンター）がニンジャ目線で一緒に考え、<br>
+            アドバイスをし、 そしてモノづくりの楽しさを共有します！</p>
+        </div>
+        <div class="header-section-button">
+          <% if @next_event_url.nil? %>
+            <%= link_to "次回の開催Check!", {:controller => "staticpages", :action => "next_event_is_still_planned"}, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect' %>
+          <% else %>
+            <%= link_to "次回の開催Check!", @next_event_url, class: 'btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-js-ripple-effect' %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">CoderDojo Konan Okayama Official Site</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="<%= @first_link[:url] %>"><%= @first_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @second_link[:url] %>"><%= @second_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @third_link[:url] %>"><%= @third_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @fourth_link[:url] %>"><%= @fourth_link[:text] %></a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <article>
+        <section id="about-section">
+          <div class="about-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">CoderDojo って？</h1>
             </div>
-          </section>
-          <section id="language-section">
-            <div class="language-section-card mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">CoderDojo 岡山 岡南での主な言語・ツール</h1>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <div class="mdl-grid">
-                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
-                    <img src="/assets/scratch-cat.png" alt="Scratch Cat">
-                    <p><a href="https://scratch.mit.edu/">Scratch</a></p>
-                  </div>
-                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
-                    <img src="/assets/java-original.png" alt="Java Logo">
-                    <p><a href="https://www.java.com/ja/">Java</a></p>
-                  </div>
-                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
-                    <img src="/assets/web-lang.png" alt="Web系言語">
-                    <p><a>HTML・CSS・JavaScript</a></p>
-                  </div>
-                  <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
-                    <img src="/assets/ruby-original.png" alt="Ruby (on Rails)">
-                    <p><a href="https://www.ruby-lang.org/ja/">Ruby (on Rails)</a></p>
-                  </div>
+            <div class="mdl-card__supporting-text">
+              <p>CoderDojo は7〜17歳の子どもを対象にした無料で参加できるプログラミング道場(サークル)です。<br>
+              2011年にアイルランドで始まり、世界では70カ国・1,200の道場、日本では全国に84以上の道場があります。(2017/5/27現在)</p>
+              <p>各地のCoderDojoは、それぞれの有志がボランティアで運営していて、<br>
+              CoderDojoでは、Ninja同士（参加している子供をNinjaといいます。）で教えあったり、<br>
+              わからないことがあれば、現役プログラマーを中心としたメンターさんに質問したりできます。</p>
+              <p>CoderDojo で学べる内容は道場ごとに異なります。例えば、次の内容を学べる道場があります。</p>
+              <ul>
+                <li>Scratch, Hour of Code</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>PHP, Python, Ruby, Unity</li>
+                <li>Arduino, Raspberry Pi など</li>
+              </ul>
+              <p>道場ごとに内容も規模も違いますが、Ninjaの自主性を重視している姿勢は一緒です。</p>
+            </div>
+          </div>
+        </section>
+        <section id="language-section">
+          <div class="language-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">CoderDojo 岡山 岡南での主な言語・ツール</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
+                  <img src="/assets/scratch-cat.png" alt="Scratch Cat">
+                  <p><a href="https://scratch.mit.edu/">Scratch</a></p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
+                  <img src="/assets/java-original.png" alt="Java Logo">
+                  <p><a href="https://www.java.com/ja/">Java</a></p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
+                  <img src="/assets/web-lang.png" alt="Web系言語">
+                  <p><a>HTML・CSS・JavaScript</a></p>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet language-section-card-cell">
+                  <img src="/assets/ruby-original.png" alt="Ruby (on Rails)">
+                  <p><a href="https://www.ruby-lang.org/ja/">Ruby (on Rails)</a></p>
                 </div>
               </div>
             </div>
-          </section>
-          <section id="summary-section">
-            <div class="summary-section-card mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">CoderDojo 岡山 岡南 の 開催概要</h1>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <p><strong>毎月 第三日曜日</strong>に開催しています。</p>
-                <p><strong>事前申し込み制</strong>です。申し込みページよりお申し込みください。</p>
-                <p>PCは無料でレンタル可能ですが、事前申込で、定員があります。</p>
-                <p>開始時刻の10分前には会場に到着しておいてください。</p>
-                <p>水筒などをお持ちの方は、開催前に指定場所においてください。</p>
-                <p><strong>また、水分補給などは、指定場所ですること！（精密機械を扱っているため。）（配線に注意！）</strong></p>
-              </div>
-            </div>
-          </section>
-          <section id="partner-section">
-            <div class="partner-section-card mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">パートナー</h1>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <h3>CoderDojo 岡山 岡南 は、これらのパートナー様のご支援によって成り立っております！</h3>
-                <ul class="partner-list">
-                  <li class="partner-list-item">
-                    <img id="sakura-internet-logo" src="/assets/sakura-internet.png">
-                    <div class="mdl-tooltip" data-mdl-for="sakura-internet-logo">「さくらのクラウド」の無償提供</div>
-                    <p>SAKURA INTERNET INC. 様</p>
-                  </li>
-                  <li class="partner-list-item">
-                    <img id="esa-io-logo" src="/assets/esa.png">
-                    <div class="mdl-tooltip" data-mdl-for="esa-io-logo">ドキュメント共有サービスの提供</div>
-                    <p>ESA.IO 様</p>
-                  </li>
-                  <li class="partner-list-item">
-                    <img id="rimgate-logo" src="/assets/non-logo.png">
-                    <div class="mdl-tooltip" data-mdl-for="rimgate-logo">サーバー・ドメイン代などの支援</div>
-                    <p>リムゲイト株式会社 様</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section id="contact-section">
-            <div class="contact-section-card mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">お問い合わせ</h1>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <div id="wufoo-mv590ug0y8dwt7">Fill out my <a href="https://coderdojokonancontact.wufoo.com/forms/mv590ug0y8dwt7">online form</a>.</div>
-                <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">There are tons of <a href="http://www.wufoo.com/features/">Wufoo features</a> to help make your forms awesome.</div>
-                <script type="text/javascript">var mv590ug0y8dwt7;(function(d, t) {
-                  var s = d.createElement(t), options = {
-                  'userName':'coderdojokonancontact',
-                  'formHash':'mv590ug0y8dwt7',
-                  'autoResize':true,
-                  'height':'560',
-                  'async':true,
-                  'host':'wufoo.com',
-                  'header':'show',
-                  'ssl':true};
-                  s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-                  s.onload = s.onreadystatechange = function() {
-                  var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-                  try { mv590ug0y8dwt7 = new WufooForm();mv590ug0y8dwt7.initialize(options);mv590ug0y8dwt7.display(); } catch (e) {}};
-                  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-                  })(document, 'script');</script>
-              </div>
-            </div>
-          </section>
-        </article>  
-      </main>
-      <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-          <div class="mdl-logo">CoderDojo Konan Okayama Official Site</div>
-            <ul class="mdl-mini-footer__link-list">
-              <li>Copyright © 2018 CoderDojo Konan Okayama</li>
-            </ul>
           </div>
-      </footer>
-    </div>
-  </body>
-</html>
+        </section>
+        <section id="summary-section">
+          <div class="summary-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">CoderDojo 岡山 岡南 の 開催概要</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p><strong>毎月 第三日曜日</strong>に開催しています。</p>
+              <p><strong>事前申し込み制</strong>です。申し込みページよりお申し込みください。</p>
+              <p>PCは無料でレンタル可能ですが、事前申込で、定員があります。</p>
+              <p>開始時刻の10分前には会場に到着しておいてください。</p>
+              <p>水筒などをお持ちの方は、開催前に指定場所においてください。</p>
+              <p><strong>また、水分補給などは、指定場所ですること！（精密機械を扱っているため。）（配線に注意！）</strong></p>
+            </div>
+          </div>
+        </section>
+        <section id="partner-section">
+          <div class="partner-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">パートナー</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <h3>CoderDojo 岡山 岡南 は、これらのパートナー様のご支援によって成り立っております！</h3>
+              <ul class="partner-list">
+                <li class="partner-list-item">
+                  <img id="sakura-internet-logo" src="/assets/sakura-internet.png">
+                  <div class="mdl-tooltip" data-mdl-for="sakura-internet-logo">「さくらのクラウド」の無償提供</div>
+                  <p>SAKURA INTERNET INC. 様</p>
+                </li>
+                <li class="partner-list-item">
+                  <img id="esa-io-logo" src="/assets/esa.png">
+                  <div class="mdl-tooltip" data-mdl-for="esa-io-logo">ドキュメント共有サービスの提供</div>
+                  <p>ESA.IO 様</p>
+                </li>
+                <li class="partner-list-item">
+                  <img id="rimgate-logo" src="/assets/non-logo.png">
+                  <div class="mdl-tooltip" data-mdl-for="rimgate-logo">サーバー・ドメイン代などの支援</div>
+                  <p>リムゲイト株式会社 様</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="contact-section">
+          <div class="contact-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">お問い合わせ</h1>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <div id="wufoo-mv590ug0y8dwt7">Fill out my <a href="https://coderdojokonancontact.wufoo.com/forms/mv590ug0y8dwt7">online form</a>.</div>
+              <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">There are tons of <a href="http://www.wufoo.com/features/">Wufoo features</a> to help make your forms awesome.</div>
+              <script type="text/javascript">var mv590ug0y8dwt7;(function(d, t) {
+                var s = d.createElement(t), options = {
+                'userName':'coderdojokonancontact',
+                'formHash':'mv590ug0y8dwt7',
+                'autoResize':true,
+                'height':'560',
+                'async':true,
+                'host':'wufoo.com',
+                'header':'show',
+                'ssl':true};
+                s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+                s.onload = s.onreadystatechange = function() {
+                var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                try { mv590ug0y8dwt7 = new WufooForm();mv590ug0y8dwt7.initialize(options);mv590ug0y8dwt7.display(); } catch (e) {}};
+                var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                })(document, 'script');</script>
+            </div>
+          </div>
+        </section>
+      </article>  
+    </main>
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">CoderDojo Konan Okayama Official Site</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li>Copyright © 2018 CoderDojo Konan Okayama</li>
+          </ul>
+        </div>
+    </footer>
+  </div>

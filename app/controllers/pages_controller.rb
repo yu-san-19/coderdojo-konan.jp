@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def index
     @title = 'ページ一覧'
     @docs  = Document.all
