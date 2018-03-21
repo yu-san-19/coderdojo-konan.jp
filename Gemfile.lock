@@ -123,7 +123,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    pg (1.0.0)
+    pg (= 0.21.0)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -233,7 +233,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kramdown (~> 1.1.0)
-  pg
+  pg (= 0.21.0)
   rails (= 4.2.7)
   rest-client
   sass-rails (~> 5.0)
