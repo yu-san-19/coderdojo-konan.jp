@@ -1,0 +1,85 @@
+ <% provide(:title, '参加したNinjaの作品') %>
+ <div class="mdl-layout mdl-js-layout pages-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll pages-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><a href="<%= root_path %>"><img src="/assets/coderdojo-konan-header-logo.png" alt="CoderDojo Konan Okayama"></a></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="<%= @first_link[:url] %>"><%= @first_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @second_link[:url] %>"><%= @second_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @third_link[:url] %>"><%= @third_link[:text] %></a>
+          <a class="mdl-navigation__link" href="<%= @fourth_link[:url] %>"><%= @fourth_link[:text] %></a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">CoderDojo Konan Okayama Official Site</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="<%= @first_link[:url] %>"><%= @first_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @second_link[:url] %>"><%= @second_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @third_link[:url] %>"><%= @third_link[:text] %></a>
+        <a class="mdl-navigation__link" href="<%= @fourth_link[:url] %>"><%= @fourth_link[:text] %></a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <article>
+        <section class="pages-section">
+          <div class="pages-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">参加したNinjaの作品</h1>
+            </div>
+            <div class="pages-contents mdl-card__supporting-text">
+              <p>とてもユニークで、素晴らしい作品を作ってます！</p>
+              <p>制作者のメッセージと一緒にご覧ください。</p>
+              <p><strong>なお、作品を実際に動かすには、 Adobe Flash が必要となります！</strong></p>
+              <p>対応した端末でご覧ください！</p>
+            </div>
+          </div>
+        </section>
+        <section class="pages-section">
+          <div class="pages-section-card mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h1 class="mdl-card__title-text">アンダイン的な何か</h1>
+            </div>
+            <div class="pages-contents mdl-card__supporting-text">
+              <div class="pages-col">
+                <%= video_tag 'endian-tekina-nanika.mp4', muted: true, controls: true, preload: true %>
+              </div>
+              <div class="pages-col">
+                <div class="ninjas-works-impressions">
+                  <div class="ninjas-works-container">
+                    <div class="pages-col ninjas-icon">
+                      <%= image_tag '/assets/ninjas-icon/ucchi.jpg' %><br>
+                      <p>うっちー<br></p>
+                    </div>
+                    <div class="pages-col">
+                      <h4>作ったNinjaのメッセージ</h4>
+                      <p></p>
+                      <p>
+                        赤いハートを上下左右キーで動かして、猫が飛ばしてくる矢印をよけるゲームです。<br>
+                        赤、青矢印はまっすぐ飛びますが、白い矢印はハートに向かって追尾してきて、<br>
+                        さらにあたってしまうと少しの間ハートが止まります。<br>
+                        しかし、白矢印は赤や青よりダメージが低いです。<br>
+                        矢印の色別に速度や動きを変えたりと工夫しました。<br>
+                      </p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>  
+    </main>
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">CoderDojo Konan Okayama Official Site</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li>Copyright © 2018 CoderDojo Konan Okayama</li>
+          </ul>
+        </div>
+    </footer>
+  </div>

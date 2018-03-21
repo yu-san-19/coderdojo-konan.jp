@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   root 'staticpages#index'
   
   get '/pages' => 'pages#index'
+  get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
+  get '/ninjas-works' => 'staticpages#ninjas_works'
   
   resources :pages, only: [:show], :path => '/'
-  
-  get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
-  get '/ninjas_works' => 'staticpages#ninjas_works'
+
   
   
   # Example of regular route:
