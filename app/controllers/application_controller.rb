@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   
   private
     def put_ver_link
-      @first_link = { :url =>  'https://www.coderdojo-konan.jp/about/', :text => "作品紹介" }
-      @second_link = { :url =>  'https://www.coderdojo-konan.jp/about/', :text => "作品紹介" }
-      @third_link = { :url =>  'https://coderdojo-konan-jp-rails-site-yumas.c9users.io/visit-interview', :text => "見学・取材について" }
-      @fourth_link = { :url =>  'https://www.coderdojo-konan.jp/about/', :text => "作品紹介"   }
+      @first_link = { :url =>  "#{root_url}", :text => "ROOT" }
+      @second_link = { :url =>  "#{root_url}ninjas-works", :text => "作品紹介" }
+      @third_link = { :url =>  "#{root_url}visit-interview", :text => "見学・取材について" }
+      @fourth_link = { :url =>  "#{root_url}", :text => "ROOT"   }
     end
 end
