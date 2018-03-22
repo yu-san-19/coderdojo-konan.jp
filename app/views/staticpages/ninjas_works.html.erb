@@ -48,7 +48,9 @@
             </div>
             <div class="pages-contents mdl-card__supporting-text">
               <div class="pages-col">
-                <div class="ninjas-works-video"><video src="<%= asset_path "endian-tekina-nanika.mp4" %>" controls="controls" preload="true"></video></div>
+                <div class="ninjas-works-video">
+                  <iframe id="ytplayer" type="text/html" width="400" height="300" src="https://www.youtube.com/embed/_QdREfAxlAY?loop=1"
+                  frameborder="0" allowfullscreen></iframe></div>
               </div>
               <div class="pages-col">
                 <div class="ninjas-works-impressions">
@@ -59,7 +61,6 @@
                     </div>
                     <div class="pages-col">
                       <h4>作ったNinjaのメッセージ</h4>
-                      <p></p>
                       <p>
                         赤いハートを上下左右キーで動かして、猫が飛ばしてくる矢印をよけるゲームです。<br>
                         赤、青矢印はまっすぐ飛びますが、白い矢印はハートに向かって追尾してきて、<br>
