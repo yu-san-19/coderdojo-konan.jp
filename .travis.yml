@@ -11,6 +11,8 @@ before_script:
 - bundle exec rake db:migrate
 script:
 - bundle exec rspec spec
+after_success:
+- bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: heroku
   api_key:
