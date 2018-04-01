@@ -11,3 +11,10 @@ before_script:
 - bundle exec rake db:migrate
 script:
 - bundle exec rake test
+deploy:
+  provider: heroku
+  api_key:
+    secure: oYbqe1jbI6EL7QqUzsINV05pgMHB4vlBLNvoFpT3hQ754TP8E4JJF41TqumDKbgMaRL4oQZt9O1MnKuBUUa4Pjmyd/VKAENjWOjz6o4IrGoWaKHd1KpgZ539YPBh1WWmYu7PxrLm8QUMApefb8wRYi8lBmKo03LwJXDQ2lctKGghlAjAmPBS1tFkCNXYXXBbQyQPU4P5ykzKZFK+7jvx3lLbK6SpUMb6gzf5lNOTp3OV2jZzUyeeii6a8zaQzTrMqsDTj7sKCd2qbZ6LiOjH6NZRR++3Jc+8hh+5dhTZqB4D0rpo8RU4nb1WqhyR+XWHJBn4x7ZahdKQfZKMlcwtsV3m4/pw/xmxhjcU8FQDVu3rmT0nYaO5LrMPL+61hxnT8VXqmJhe83CTNgXp60Ka0EQRhXVDIJorEHLJPXMvyP0OntLbAJcETxR+TD3Z1lDbemuH5K6oKHK2LaThpQ7SjxW9hsJZJUYoIpTlFS6KIQ2o7fFZtkKqvyqjYblA7qPicDvfOZsiAeVRVvpaO2GRIm6uflx583cMfbRGK1Z9x/yvr4bDElZcAsBimz6NkA7KFrPLN0IOaFDyEsCSeAVnOYjwdqaindTXsfZZ5ASsRKdr6VdQmFPViuHvaWioh+ue2s/dL6hETFyxf2CIIkaebm59g1b0wY9iTssB7jectVI=
+  app: coderdojo-konan-jp-rails
+  on:
+    repo: CoderDojo-Konan-Okayama/coderdojo-konan.jp
