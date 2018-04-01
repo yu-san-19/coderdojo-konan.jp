@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
       @first_link = { :url =>  "#{root_url}", :text => "ROOT" }
       @second_link = { :url =>  "#{root_url}ninjas-works", :text => "作品紹介" }
       @third_link = { :url =>  "#{root_url}visit-interview", :text => "見学・取材について" }
-      @fourth_link = { :url =>  "#{root_url}", :text => "ROOT"   }
+      @fourth_link = { :url =>  "#{root_url}f-and-q", :text => "よくある質問 (F&Q)"   }
     end
 end
