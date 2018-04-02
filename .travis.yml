@@ -15,7 +15,7 @@ before_script:
 script:
 - bundle exec rspec spec
 after_success:
-  - bundle exec codeclimate-test-reporter
+- bundle exec codeclimate-test-reporter
 deploy:
   provider: heroku
   api_key:
@@ -23,3 +23,6 @@ deploy:
   app: coderdojo-konan-jp-rails
   on:
     repo: CoderDojo-Konan-Okayama/coderdojo-konan.jp
+addons:
+  code_climate:
+    repo_token: 6e56261cc3c2a680d6a54edf926bd4ae0e2d0171190c429bd5b6748892301372
