@@ -1,6 +1,6 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe StaticpagesController, type: :controller do
+describe StaticpagesController, type: :controller do
   describe "Request GET #index" do
     before do
       get :index
