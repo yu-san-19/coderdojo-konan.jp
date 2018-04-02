@@ -1,7 +1,8 @@
 # CoderDojo 岡山 岡南 公式ホームページ
 
 [![Build Status](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp.svg?branch=master)](https://travis-ci.org/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
-[![codecov](https://codecov.io/gh/CoderDojo-Konan-Okayama/coderdojo-konan.jp/branch/master/graph/badge.svg)](https://codecov.io/gh/CoderDojo-Konan-Okayama/coderdojo-konan.jp)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/maintainability)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5dc68bf422fb19f6c628/test_coverage)](https://codeclimate.com/github/CoderDojo-Konan-Okayama/coderdojo-konan.jp/test_coverage)
 
 移行まではかなーりの時間がかかると思われますが、
 
