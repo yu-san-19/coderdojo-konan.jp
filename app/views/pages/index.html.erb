@@ -2,7 +2,7 @@
 <% provide(:desc, 'このサイトのページ一覧です。特別なページなどは含まれていない場合もあります。') %>
 <div class="docs-list">
   <ul>
-    <% @docs.each do |doc| %>
+    <% @pages.each do |doc| %>
       <li><%= link_to doc.title, doc.url %></li>
     <% end %>
   </ul>
