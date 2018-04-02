@@ -44,8 +44,7 @@ group :development, :test do
 end
 
 group :test do
-  require 'simplecov'
-  require 'ruby-test-reporter', '~> 1.0.0'
+  gem 'simplecov'
 end
 
 group :development do

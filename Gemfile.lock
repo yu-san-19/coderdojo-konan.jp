@@ -43,10 +43,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (10.0.0)
-    codecov (0.1.10)
-      json
-      simplecov
-      url
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -255,7 +251,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    url (0.3.2)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -268,7 +263,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  codecov
   coffee-rails (~> 4.1.0)
   factory_bot_rails
   font-awesome-rails
@@ -284,6 +278,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simplecov
   spring
   sqlite3
   travis
