@@ -11,11 +11,10 @@ RSpec.describe StaticpagesController, type: :controller do
       next_event_url = result["events"][0]["event_url"]
       next_event_date = result["events"][0]["started_at"]
       if today < next_event_date then
-        expected = next_event_url
+        expect(assigns[:next_event_url]).to eq next_event_url
       else
-        expected = nil
+        expect(assigns[:next_event_url]).to eq nil
       end
-      expect(assigns[:next_event_url]).to eq expected
     end
   end
 end
