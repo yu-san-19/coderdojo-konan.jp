@@ -1,5 +1,10 @@
 require 'simplecov'
-SimpleCov.start
+require "codeclimate-test-reporter"
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  CodeClimate::TestReporter::Formatter
+]
+SimpleCov.start "rails"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
