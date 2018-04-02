@@ -10,14 +10,14 @@ RSpec.describe PagesController, type: :controller do
   describe "Request GET #show" do
     it "can show @content" do
       param    = 'visit-interview'
-      get :show, :id => param
+      get :show, params: {:id => param}
       page      = Page.new(param)
       expected = Kramdown::Document.new(page.content).to_html
       expect(assigns(:content)).to eq expected
     end
     describe "when invalid filename" do
       before do
-        get :show, :id => 'not_found_hoge'
+        get :show, params: {:id => 'not_found_hoge_hoge'}
       end
       it 'redirect to 404 page?' do
         expect(response.status).to eq 404
