@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   get '/ninjas-works' => 'staticpages#ninjas_works'
   
   resources :pages, only: [:show], :path => '/'
-
-  
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

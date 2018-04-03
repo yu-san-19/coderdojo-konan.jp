@@ -2,14 +2,19 @@ class PagesController < ApplicationController
 
   def index
     @title = 'ページ一覧'
-    @docs  = Document.all
-    @url   = request.url
+    @pages = Page.all
+    @url = request.url
   end
 
   def show
-    @doc = Document.new(params[:id])
-    redirect_to root_url unless @doc.exists?
-    @content = Kramdown::Document.new(@doc.content).to_html
-    @url     = request.url
+    @page = Page.new(params[:id])
+    unless @page.exists?
+      render :action => "not_found_404",  :status => 404
+    end
+    @content = Kramdown::Document.new(@page.content).to_html
+    @url = request.url
+  end
+  
+  def not_found_404
   end
 end
