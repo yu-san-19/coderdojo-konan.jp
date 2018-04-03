@@ -9,9 +9,12 @@ class PagesController < ApplicationController
   def show
     @page = Page.new(params[:id])
     unless @page.exists?
-      render :file => "#{Rails.root}/public/404.html",  :status => 404
+      render :action => "not_found_404",  :status => 404
     end
     @content = Kramdown::Document.new(@page.content).to_html
     @url = request.url
+  end
+  
+  def not_found_404
   end
 end
