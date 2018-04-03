@@ -19,8 +19,11 @@ RSpec.describe PagesController, type: :controller do
       before do
         get :show, params: {:id => 'not_found_hoge_hoge'}
       end
-      it 'redirect to 404 page?' do
+      it 'redirect status is 404' do
         expect(response.status).to eq 404
+      end
+      it 'render not_found_404.html.erb' do
+        expect(response).to render_template(:not_found_404)
       end
     end
   end
