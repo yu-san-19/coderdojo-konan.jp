@@ -3,13 +3,15 @@ require 'spec_helper'
 describe ApplicationHelper do
   include(ApplicationHelper)
   describe "full_title" do
-    it "plovided title is nil" do
-      plovided_title = nil
-      expect(full_title(plovided_title)).to eq "CoderDojo Konan Okayama Official Site"
-    end
-    it "plovided title is empty" do
-      plovided_title = ""
-      expect(full_title(plovided_title)).to eq "CoderDojo Konan Okayama Official Site"
+    describe "when plovided title is nil or empty" do
+      it "plovided title is nil" do
+        plovided_title = nil
+        expect(full_title(plovided_title)).to eq "CoderDojo Konan Okayama Official Site"
+      end
+      it "plovided title is empty" do
+        plovided_title = ""
+        expect(full_title(plovided_title)).to eq "CoderDojo Konan Okayama Official Site"
+      end
     end
     it "has plovided title" do
       plovided_title = "Test Page"
