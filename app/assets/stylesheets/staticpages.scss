@@ -135,6 +135,26 @@ article {
         width: 100%;
         height: 100%;
         padding: 0.5rem;
+        .sns-contact-block {
+          text-align: center;
+          margin: 0.8rem;
+          padding: 0.5rem;
+          width: 100%;
+          height: 100%;
+          .fb-page-style {
+            display: inline-block;
+            margin: 0.5rem;
+            vertical-align: top;
+          } 
+          .twitter-timeline-box {
+            display: inline-block;
+            position: relative;
+            margin: 0.5rem;
+            width: 340px;
+            height: 500px;
+            vertical-align: top;
+          }
+        }
       }
     }
   }

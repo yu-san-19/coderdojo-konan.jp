@@ -13,11 +13,12 @@ class StaticpagesController < ApplicationController
   end
 
   private
-
   def get_latest_event
-    url = 'https://connpass.com/api/v1/event/'
-    response = RestClient.get(url, params: {series_id: 3786, order: 2})
+    response = rest_client.get(params: {:series_id => 3786, :order => 2})
     json = JSON.parse(response.body)
     json['events'].first
+  end
+  def rest_client
+    RestClient::Resource.new 'https://connpass.com/api/v1/event/'
   end
 end
