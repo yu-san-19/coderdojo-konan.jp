@@ -1,5 +1,6 @@
 <% provide(:title, @title) %>
 <% provide(:desc, 'このサイトのページ一覧です。特別なページなどは含まれていない場合もあります。') %>
+<% provide(:url, request.url) %>
 <div class="docs-list">
   <ul>
     <% @pages.each do |page| %>
