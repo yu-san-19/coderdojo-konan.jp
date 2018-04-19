@@ -1,7 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe ApplicationHelper do
-  include(ApplicationHelper)
   describe "full_title" do
     describe "when plovided title is nil or empty" do
       it "plovided title is nil" do
