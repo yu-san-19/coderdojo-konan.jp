@@ -183,4 +183,7 @@
         </div>
       </footer>
     </main>
+    <% unless next_event_url_helper.nil? %>
+      <div class="next_event_button"><a href="<%= next_event_url_helper %>"><p>ただいま申し込み<br>受付中！<br></p></a></div>
+    <% end %>
   </div>
