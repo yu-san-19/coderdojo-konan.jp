@@ -31,6 +31,10 @@ gem "kramdown", "~> 1.1.0"
 
 gem "font-awesome-rails"
 
+gem 'bcrypt', '3.1.11'
+
+gem 'omniauth-slack'
+
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
