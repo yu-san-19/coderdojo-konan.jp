@@ -12,3 +12,5 @@ WP よりも Rails の方が管理しやすいので（色々と機能の組み�
 Issue を使用したいため早めにリポジトリを公開しました。（することの管理が紐づいててわかりやすい。）
 
 なお、ソースコードや仕組みや中の文などは coderdojo.jp (https://github.com/coderdojo-japan/coderdojo.jp) を参考にさせていただいております。
+
+また、実際のサイトは、 https://coderdojo-konan-jp-rails.herokuapp.com/ からご覧になれます。（テスト公開中）
