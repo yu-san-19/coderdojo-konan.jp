@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.6'
+gem 'rails', '5.2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.5'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,6 +34,8 @@ gem "font-awesome-rails"
 gem 'bcrypt', '3.1.11'
 
 gem 'omniauth-slack'
+
+gem 'bootsnap'
 
 
 group :development, :test do
