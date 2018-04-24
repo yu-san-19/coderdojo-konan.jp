@@ -11,10 +11,9 @@ RSpec.describe "public/posts/show", type: :view do
   end
 
   it "renders attributes in <p>" do
+    @body = Kramdown::Document.new(@post.body).to_html
     render
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/Title/)
-    expect(rendered).to match(/2/)
-    expect(rendered).to match(/Slug/)
   end
 end
