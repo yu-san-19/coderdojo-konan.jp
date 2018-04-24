@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
@@ -8,6 +7,14 @@ Rails.application.routes.draw do
   get '/pages' => 'pages#index'
   get '/next-event-is-still-planned' => 'staticpages#next_event_is_still_planned'
   get '/ninjas-works' => 'staticpages#ninjas_works'
+  
+  namespace :admin do
+    resources :posts # => /admin/posts etc...
+  end
+  
+  scope module: :public do
+    resources :posts, only: [:show,:index] # => /posts etc...
+  end
   
   resources :pages, only: [:show], :path => '/'
   

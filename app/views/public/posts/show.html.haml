@@ -1,0 +1,19 @@
+%p#notice= notice
+
+%p
+  %b Body: 
+  %br= @post.body
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Published at:
+  = @post.published_at
+%p
+  %b Author:
+  = @post.author_id
+%p
+  %b Slug:
+  = @post.slug
+
+= link_to 'Back', posts_path
