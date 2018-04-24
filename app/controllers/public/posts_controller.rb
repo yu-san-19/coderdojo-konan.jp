@@ -10,6 +10,7 @@ class Public::PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @body = Kramdown::Document.new(@post.body).to_html
   end
 
   private
