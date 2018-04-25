@@ -1,4 +1,4 @@
-class Public::PostsController < ApplicationController
+class Public::PostsController < Public::Base
   before_action :set_post, only: [:show]
 
   # GET /posts

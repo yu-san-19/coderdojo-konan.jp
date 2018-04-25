@@ -1,3 +1,86 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.posts-layout {
+    .posts-layout__header {
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), image-url('coderdojo-konan-header-image-1.jpg');
+        background-size: cover;
+    	background-position: center;
+        .mdl-layout__header-row {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    article {
+        margin: 0.5rem;
+        #posts-section {
+          padding: 0.8rem;
+          .posts-section-card {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+          }
+        }
+        .posts-section {
+          padding: 0.8rem;
+          .posts-section-card {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+          }
+        }
+    }
+    .mdl-layout__content {
+        #posts-section {
+            .docs-list {
+                ul {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .posts-contents {
+            h1 {
+                font-size: 2.0rem;
+                color: black;
+                line-height: 2.2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+                color: black;
+                line-height: 1.8rem;
+            }
+            h3 {
+                font-size: 1.65rem;
+                color: black;
+                line-height: 1.7rem;
+            }
+            h4 {
+                font-size: 1.5rem;
+                line-height: 1.6rem;
+                color: black;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .posts-col {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 1rem;
+            }
+            
+        .twitter-share-button-style {
+            vertical-align: top;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        .fb-share-button-style {
+            vertical-align: top;
+            display: inline-block;
+            margin: 0.5rem;
+          }
+        }
+    }
+}

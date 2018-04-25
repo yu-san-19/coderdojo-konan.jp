@@ -7,6 +7,14 @@ module ApplicationHelper
         "#{page_title} | #{base_title}"
       end
   end
+  def admin_full_title(page_title)
+      base_title = "ダッシュボード | CoderDojo 岡山 岡南 公式サイト"
+      if page_title.blank?
+        base_title
+      else
+        "#{page_title} - #{base_title}"
+      end
+  end
 
   def next_event_url
     latest_event = get_latest_event

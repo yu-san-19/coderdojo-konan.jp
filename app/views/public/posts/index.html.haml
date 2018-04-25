@@ -2,20 +2,8 @@
 
 %h1 Listing posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Published at
-      %th Author
-      %th
-
-  %tbody
-    - @posts.published.each do |post|
-      %tr
-        %td= post.title
-        %td= post.published_at
-        %td= post.author_id
-        %td= link_to 'Show', post
+%ul
+  - @posts.published.each do |post|
+    %li= link_to "#{post.title} - #{post.published_at.to_s(:db)} ", post
 
 %br

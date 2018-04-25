@@ -1,4 +1,4 @@
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < Admin::Base
   before_action :set_post, only: [:edit, :update, :destroy]
 
   # GET /admin/posts

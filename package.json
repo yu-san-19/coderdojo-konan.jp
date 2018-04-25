@@ -1,0 +1,11 @@
+{
+  "name": "coderdojo-konan-jp-rails-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:CoderDojo-Konan-Okayama/coderdojo-konan.jp.git",
+  "author": "Yuma Soga <ysoga19@gmail.com>",
+  "license": "Apatch-2.0",
+  "dependencies": {
+    "admin-lte": "^2.4.3"
+  }
+}
