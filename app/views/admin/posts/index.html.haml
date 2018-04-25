@@ -1,4 +1,4 @@
-- provide :title, '記事一覧'
+- provide :title, '記事一覧 -Dashboard'
 
 %h1 Listing posts
 
@@ -8,6 +8,7 @@
       %th Title
       %th Published at
       %th Author
+      %th Published?
       %th
       %th
       %th
@@ -18,9 +19,14 @@
         %td= post.title
         %td= post.published_at
         %td= post.author_id
+        %td
+          - if @posts.published.exists? post.id
+            Published
+          - else
+            Not Published
         %td= link_to 'Show', post
         %td= link_to 'Edit', edit_admin_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
