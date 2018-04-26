@@ -1,11 +1,11 @@
+- provide :title, @post.title
+
 %p#notice= notice
 
 %h1
   = @post.title
 
-%p
-  %b Body: 
-  %br= raw @body
+%br= raw @body
 // %p
 //   %b Published at:
 //   = @post.published_at
@@ -16,4 +16,4 @@
 //   %b Slug:
 //   = @post.slug
 
-= link_to 'Back', posts_path
+= link_to '記事一覧 へ', posts_path

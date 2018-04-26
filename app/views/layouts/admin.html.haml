@@ -5,8 +5,8 @@
     %meta{:name => "robots", :content => "noindex"}/
     %title= admin_full_title(yield :title)
     %meta{content: "width=device-width,initial-scale=1", name: "viewport"}/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = csrf_meta_tags
     = favicon_link_tag
     // %meta{:content => "summary", :name => "twitter:card"}/
@@ -183,22 +183,8 @@
           %li.active
             %a{:href => "#"}
               %i.fa.fa-link
-              %span Link
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-link
-              %span Another Link
-          %li.treeview
-            %a{:href => "#"}
-              %i.fa.fa-link
-              %span Multilevel
-              %span.pull-right-container
-                %i.fa.fa-angle-left.pull-right
-            %ul.treeview-menu
-              %li
-                %a{:href => "#"} Link in level 2
-              %li
-                %a{:href => "#"} Link in level 2
+              %span Posts
+
         / /.sidebar-menu
       / /.sidebar
     / Content Wrapper. Contains page content
@@ -206,8 +192,8 @@
       / Content Header (Page header)
       %section.content-header
         %h1
-          Page Header
-          %small Optional description
+          = yield(:title)
+          %small= yield(:desc)
         %ol.breadcrumb
           %li
             %a{:href => "#"}
@@ -227,9 +213,9 @@
         Anything you want
       / Default to the left
       %strong
-        Copyright © 2016
+        Copyright © 2018
         = succeed "." do
-          %a{:href => "#"} Company
+          %a{:href => - root_url } CoderDojo Konan Okayama
       All rights reserved.
     / Control Sidebar
     %aside.control-sidebar.control-sidebar-dark

@@ -1,33 +1,36 @@
-- provide :title, '記事一覧 -Dashboard'
+- provide :title, '記事一覧'
 
-%h1 Listing posts
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Published at
-      %th Author
-      %th Published?
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.title
-        %td= post.published_at
-        %td= post.author_id
-        %td
-          - if @posts.published.exists? post.id
-            Published
-          - else
-            Not Published
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_admin_post_path(post)
-        %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_admin_post_path
+.box.box-default
+  .box-header.with-border
+    %h3.box-title 記事一覧
+    .box-tools.pull-right
+      %a{:href => new_admin_post_path}
+        %button.btn.btn-box-tool.btn.btn-box-tool{:type => "button", :data-widget => "collapse"}
+          %i.fa.fa-plus
+          新規作成
+  .box-body
+    %table#posts-list.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th Title
+          %th Published at
+          %th Author
+          %th Published?
+          %th
+          %th
+          %th
+          
+      %tbody
+        - @posts.each do |post|
+          %tr
+            %td= post.title
+            %td= post.published_at
+            %td= post.author_id
+            %td
+              - if @posts.published.exists? post.id
+                Published
+              - else
+                Not Published
+            %td= link_to 'Show', post, :target=>["_new"]
+            %td= link_to 'Edit', edit_admin_post_path(post)
+            %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }
