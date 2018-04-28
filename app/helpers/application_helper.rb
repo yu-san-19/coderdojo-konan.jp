@@ -18,7 +18,7 @@ module ApplicationHelper
 
   def next_event_url
     latest_event = get_latest_event
-    if Date.parse(latest_event['started_at']) > Date.today
+    if Date.parse(latest_event['started_at']) > Date.current
       latest_event['event_url']
     else
       nil

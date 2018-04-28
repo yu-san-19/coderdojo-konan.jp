@@ -35,7 +35,7 @@ describe ApplicationHelper do
 
     context '現在日付が開催前の場合' do
       before do
-        Timecop.travel(Date.new(2018, 4, 9))
+        Timecop.travel(Date.new(2018, 4, 9).in_time_zone)
       end
       it 'イベントURLを返すこと' do
         is_expected.to eq 'http://example.com'
@@ -44,7 +44,7 @@ describe ApplicationHelper do
 
     context '現在日付が開催日以降の場合' do
       before do
-        Timecop.travel(Date.new(2018, 4, 10))
+        Timecop.travel(Date.new(2018, 4, 10).in_time_zone)
       end
       it 'nilを返すこと' do
         is_expected.to be_nil

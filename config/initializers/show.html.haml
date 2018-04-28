@@ -1,0 +1,14 @@
+- provide :title, @post.title
+
+%br= raw @body
+// %p
+//   %b Published at:
+//   = @post.published_at
+// %p
+//   %b Author:
+//   = @post.author_id
+// %p
+//   %b Slug:
+//   = @post.slug
+
+= link_to '記事一覧 へ', posts_path
