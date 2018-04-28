@@ -11,6 +11,12 @@ class Admin::PostsController < Admin::Base
   def new
     @post = Post.new
   end
+  
+  # GET /posts/1
+  # GET /posts/1.json
+  def show
+    @body = Kramdown::Document.new(@post.body).to_html
+  end
 
   # GET /admin/posts/1/edit
   def edit

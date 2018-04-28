@@ -4,3 +4,15 @@
 $(document).on 'turbolinks:load', ->
   $('body').layout 'fix'
   return
+
+init_datetimepciker = ->
+  (->
+    $(".form_datetime").datetimepicker
+      format: "YYYY/MM/DD HH:mm"
+      sideBySide: true
+  )
+
+$(document).ready ->
+  init_datetimepciker()
+
+$(document).on "ready turbolinks:load", init_datetimepciker()

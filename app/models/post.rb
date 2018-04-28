@@ -8,4 +8,8 @@ class Post < ApplicationRecord
   def should_generate_new_friendly_id?
     slug_changed? || super
   end
+  
+  def published?
+    Post.all.published.exists? self.id
+  end
 end

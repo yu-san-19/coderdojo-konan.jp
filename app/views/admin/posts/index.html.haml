@@ -27,10 +27,10 @@
             %td= post.published_at
             %td= post.author_id
             %td
-              - if @posts.published.exists? post.id
+              - if post.published?
                 Published
               - else
                 Not Published
-            %td= link_to 'Show', post, :target=>["_new"]
+            %td= link_to 'Preview', [:admin, post], :target=>["_new"]
             %td= link_to 'Edit', edit_admin_post_path(post)
             %td= link_to 'Destroy', [:admin, post], method: :delete, data: { confirm: 'Are you sure?' }

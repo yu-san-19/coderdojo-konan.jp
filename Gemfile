@@ -41,6 +41,11 @@ gem 'friendly_id'
 
 gem 'bootstrap-sass'
 
+gem 'simple_form'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
