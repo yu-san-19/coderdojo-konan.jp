@@ -44,11 +44,13 @@
             .mdl-card__title
               %h1.mdl-card__title-text CoderDojo って？
             .mdl-card__supporting-text
-              .twitter-share-button-style
-                %a.twitter-share-button{"data-hashtags" => "CoderDojo岡南", "data-related" => "CoderDojo_Konan,CoderDojoJapan", "data-show-count" => "false", "data-text" => "CoderDojo 岡山 岡南 公式ホームページ", "data-url" => root_url, "data-via" => "CoderDojo_Konan", :href => "https://twitter.com/share?ref_src=twsrc%5Etfw"} Tweet
-              .fb-share-button.fb-share-button-style{"data-href" => root_url, "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "small"}
-                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=#{root_url}=sdkpreparse", :target => "_blank"} シェア
-              %br/
+              / Twitter
+              .button.twitter.twitter-share-button-style
+                %a.twitter-share-button{"data-lang" => "en", "data-text" => "CoderDojo Konan Okayama Official Site", "data-url" => "#{request.original_url}", :href => "https://twitter.com/share"} Tweet
+              / Facebook
+              .button.facebook.fb-share-button-style
+                .fb-share-button{"data-href" => "#{request.original_url}", "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "small"}
+                  %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=#{request.original_url}&src=sdkpreparse", :target => "_blank"} Share
               %p
                 CoderDojo は7〜17歳の子どもを対象にした無料で参加できるプログラミング道場(サークル)です。
                 %br/
@@ -155,12 +157,11 @@
                                   var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
                                   })(document, 'script');
               .sns-contact-block
-                .fb-page{"data-adapt-container-width" => "true", "data-height" => "500", "data-hide-cover" => "false", "data-href" => "https://www.facebook.com/Coderdojo.Konan/", "data-show-facepile" => "true", "data-small-header" => "false", "data-tabs" => "timeline", "data-width" => "340"}
+                .fb-page{"data-adapt-container-width" => "true", "data-hide-cover" => "false", "data-href" => "https://www.facebook.com/Coderdojo.Konan/", "data-show-facepile" => "true", "data-small-header" => "false", "data-tabs" => "timeline"}
                   %blockquote.fb-xfbml-parse-ignore{:cite => "https://www.facebook.com/Coderdojo.Konan/"}
                     %a{:href => "https://www.facebook.com/Coderdojo.Konan/"} CoderDojo 岡山 岡南
-                    
                 .twitter-timeline-box
-                  %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/CoderDojo_Konan?ref_src=twsrc%5Etfw"} Follow @CoderDojo_Konan
+                  %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/CoderDojo_Konan"} Follow @CoderDojo_Konan
                   %a.twitter-timeline{"data-height" => "500", "data-theme" => "light", "data-width" => "340", :href => "https://twitter.com/coderdojo_konan?ref_src=twsrc%5Etfw"} Tweets by coderdojo_konan
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section

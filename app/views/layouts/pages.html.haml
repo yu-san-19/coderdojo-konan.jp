@@ -28,6 +28,15 @@
     %meta{:coderdojo => "1881439892127060", :property => "fb:pages"}/
     %meta{:content => "CoderDojo 岡山 岡南", :name => "author"}/
   %body
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12&appId=192119844619453&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     .mdl-layout.mdl-js-layout.pages-layout
       %header.mdl-layout__header.mdl-layout__header--scroll.pages-layout__header
         .mdl-layout__header-row
@@ -57,8 +66,8 @@
               .mdl-card__title
                 %h1.mdl-card__title-text= yield(:title)
               .pages-contents.mdl-card__supporting-text
-                .twitter-share-button-style
-                  %a.twitter-share-button{"data-hashtags" => "CoderDojo岡南", "data-related" => "CoderDojo_Konan,CoderDojoJapan", "data-show-count" => "false", "data-text" => "#{yield(:title) + " - CoderDojo 岡山 岡南 公式HP"}", "data-url" => "#{yield(:url)}", "data-via" => "CoderDojo_Konan", :href => "https://twitter.com/share?ref_src=twsrc%5Etfw"} Tweet
+                .button.twitter.twitter-share-button-style
+                  %a.twitter-share-button{"data-lang" => "en", "data-text" => "CoderDojo Konan Okayama Official Site", "data-url" => "#{request.original_url}", :href => "https://twitter.com/share"} Tweet
                 .fb-share-button.fb-share-button-style{"data-href" => "#{request.url}", "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "small"}
                   %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=#{request.url}=sdkpreparse", :target => "_blank"} シェア
                 = yield
