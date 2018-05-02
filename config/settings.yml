@@ -1,0 +1,19 @@
+default: &default
+  slack:
+    client_id: "<%= ENV['SLACK_CLIENT_ID'] %>" 
+    secret_key: <%= ENV['SLACK_SECRET_KEY'] %>
+    team_name: <%= ENV['SLACK_TEAM_NAME'] %>
+    scope: identify
+    redirect_url: <%= ENV['SLACK_REDIRECT_URL'] %>
+    state: "<%= ENV['SLACK_STATE_CODE'] %>"
+    url:
+      auth: https://slack.com/oauth/authorize?
+      info: https://slack.com/api/oauth.access?
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default 

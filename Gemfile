@@ -33,8 +33,6 @@ gem "font-awesome-rails"
 
 gem 'bcrypt', '3.1.11'
 
-gem 'omniauth-slack'
-
 gem 'bootsnap'
 
 gem 'friendly_id'
@@ -47,6 +45,10 @@ gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 gem 'material_design_lite-sass'
+
+gem 'easy_settings'
+
+gem 'slack-api'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

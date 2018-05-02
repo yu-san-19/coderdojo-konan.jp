@@ -17,3 +17,7 @@
 /tmp
 /coverage
 /node_modules
+
+/config/master.key
+# Ignore master key for decrypting credentials and more.
+/config/master.key
